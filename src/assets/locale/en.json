@@ -1,0 +1,25 @@
+{
+    "general": {
+        "welcome": "Welcome to Todo Project app"
+    },
+    "auth": {
+        "email": "Email",
+        "emailPlaceholder": "Enter your email here",
+        "password": "Password",
+        "passwordPlaceholder": "Enter your password here",
+        "firstName": "First name",
+        "firstNamePlaceholder": "Enter your first name here",
+        "lastName": "Last name",
+        "lastNamePlaceholder": "Enter your last name here",
+        "register": "Register",
+        "login": "Login",
+        "cancel": "Cancel",
+        "noAccount": "Don't have an account yet?",
+        "haveAccount": "Have an account already?",
+        "validEmailError": "This should be a valid Email",
+        "requiredFieldError": "This field is reguired",
+        "minlengthError": "Length should be at least {{value}} characters",
+        "maxlengthError": "Length should not be more then {{value}} characters",
+        "passwordPatternError": "Your password should contain upper and lower case letters and at least one special character"
+    }
+}

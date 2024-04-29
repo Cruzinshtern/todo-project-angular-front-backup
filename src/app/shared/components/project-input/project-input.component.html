@@ -5,19 +5,19 @@
     <!-- Show errors if any -->
     @if (_formControl_.errors) {
         @if (_formControl_.errors['email']) {
-            <small>This should be a valid Email</small>
+            <small>{{'auth.validEmailError' | translate }}</small>
         }
         @if (_formControl_.errors['required']) {
-            <small>This field is reguired</small>
+            <small>{{'auth.requiredFieldError' | translate }}</small>
         }
         @if (_formControl_.errors['minlength']) {
-            <small>Length should be at least {{_formControl_.errors['minlength'].requiredLength}} characters</small>
+            <small>{{'auth.minlengthError' | translate: { value: _formControl_.errors['minlength'].requiredLength } }}</small>
         }
         @if (_formControl_.errors['maxlength']) {
-            <small>Length should be maximum {{_formControl_.errors['maxlength'].requiredLength}}</small>
+            <small>{{'auth.maxlengthError' | translate: { value: _formControl_.errors['maxlength'].requiredLength } }}</small>
         }
         @if (_formControl_.errors['pattern']) {
-            <small>Your password should contain upper and lower case letters and at least one special character</small>
+            <small>{{'auth.passwordPatternError' | translate }}</small>
         }
     }
 </div>

@@ -5,13 +5,14 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { VALIDATION_REGEX } from '../../../shared/constants/email-validation-regex.const';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-login',
     standalone: true,
     templateUrl: './login.component.html',
     styleUrl: './login.component.scss',
-    imports: [ProjectButtonComponent, ProjectInputComponent, FormsModule, ReactiveFormsModule, RouterLink]
+    imports: [ProjectButtonComponent, ProjectInputComponent, FormsModule, ReactiveFormsModule, RouterLink, TranslateModule]
 })
 export class LoginComponent implements OnInit {
     form: FormGroup;

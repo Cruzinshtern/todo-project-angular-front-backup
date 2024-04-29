@@ -1,11 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { AbstractControl, FormControl, UntypedFormControl } from '@angular/forms';
-import { tap } from 'rxjs/operators';
+import { Component, Input } from '@angular/core';
+import { AbstractControl } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'project-input',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './project-input.component.html',
   styleUrl: './project-input.component.scss'
 })

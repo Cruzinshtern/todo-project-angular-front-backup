@@ -1,0 +1,25 @@
+{
+    "general": {
+        "welcome": "Вітаємо в Todo Project app"
+    },
+    "auth": {
+        "email": "Електрона пошта",
+        "emailPlaceholder": "Введіть ваше електрону пошту тут",
+        "password": "Пароль",
+        "passwordPlaceholder": "Введіть ваш пароль тут",
+        "firstName": "Ім'я",
+        "firstNamePlaceholder": "Введіть ваше ім'я тут",
+        "lastName": "Прізвище",
+        "lastNamePlaceholder": "Введіть ваше прізвище тут",
+        "register": "Регістрація",
+        "login": "Логін",
+        "cancel": "Відміна",
+        "noAccount": "У Вас все ще немає аккаунту?",
+        "haveAccount": "У Вас вже є аккаунт?",
+        "validEmailError": "Це повинна бути валідна адреса електронної пошти",
+        "requiredFieldError": "Це поле обов'язкове",
+        "minlengthError": "Довжина повинна складати як мінімум {{value}} символів",
+        "maxlengthError": "Довжина повинна складати не більше {{value}} символів",
+        "passwordPatternError": "Ваш пароль повинен містити букви верхнього і нижнього регістру, а також один спеціальний символ"
+    }
+}

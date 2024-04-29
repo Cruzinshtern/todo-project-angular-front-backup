@@ -5,11 +5,12 @@ import { ProjectButtonComponent } from '../../../shared/components/project-butto
 import { ProjectInputComponent } from '../../../shared/components/project-input/project-input.component';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [ProjectButtonComponent, ProjectInputComponent, FormsModule, ReactiveFormsModule],
+  imports: [ProjectButtonComponent, ProjectInputComponent, FormsModule, ReactiveFormsModule, TranslateModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss'
 })
