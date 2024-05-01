@@ -7,6 +7,7 @@ import { MissingTranslationHandler, TranslateLoader, TranslateModule } from '@ng
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MissingTranslationService } from './shared/services/missing-translation.service';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateLoader {
   return new TranslateHttpLoader(http, './assets/locale/', '.json');
@@ -22,5 +23,5 @@ export const appConfig: ApplicationConfig = {
       },
       missingTranslationHandler: { provide: MissingTranslationHandler, useClass: MissingTranslationService },
     })
-  )]
+  ), provideAnimationsAsync()]
 };
