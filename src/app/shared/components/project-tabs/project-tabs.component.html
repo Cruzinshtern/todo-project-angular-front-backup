@@ -1,0 +1,6 @@
+<div class="flex">
+    @for (tab of tabs; track $index) {
+        <div [ngClass]="['border', 'px-4', 'py-2', 'tab', 'hover:cursor-pointer', tab.selected ? 'selected': '']" (click)="selectTab(tab)">{{ 'tabs.' + tab.value | translate }}</div>
+    }
+</div>
+
