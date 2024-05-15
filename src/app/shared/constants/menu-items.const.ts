@@ -7,7 +7,7 @@ export const MENU_ITEMS: IMenuItem[] = [
 
     // Main menu items
     {key: 'home', value: 'Home', path: '/home'},
-    {key: 'list', value: 'List', path: '/list'},
+    {key: 'list', value: 'Todos', path: '/todos'},
     {key: 'settings', value: 'Settings', path: '/settings'},
 
     // This item is left the last one on purpose

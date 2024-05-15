@@ -3,20 +3,29 @@ import { LIST_TAB_ITEMS } from '../shared/constants/list-tab-items.const';
 import { ProjectTabsComponent } from '../shared/components/project-tabs/project-tabs.component';
 import { ITabItem } from '../shared/interfaces/tab-item.interface';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
+import { Store, select } from '@ngrx/store';
+import { GetTodos } from '../store/todos/todos.actions';
+import { selectTodos } from '../store/todos/todos.selector';
+import { ITodo } from '../shared/interfaces/todo.interface';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-list',
+  selector: 'app-todos',
   standalone: true,
-  imports: [ProjectTabsComponent],
-  templateUrl: './list.component.html',
-  styleUrl: './list.component.scss'
+  imports: [ProjectTabsComponent, AsyncPipe],
+  templateUrl: './todos.component.html',
+  styleUrl: './todos.component.scss'
 })
-export class ListComponent implements OnInit, OnDestroy {
+export class TodosComponent implements OnInit, OnDestroy {
   tabs: ITabItem[] = LIST_TAB_ITEMS;
   sub: Subscription;
+  todos$: Observable<ITodo[]>;
 
-  constructor(private _route: ActivatedRoute, private _router: Router) {}
+  constructor(private _route: ActivatedRoute, private _router: Router, private _store: Store<any>) {
+    this._store.dispatch(GetTodos());
+
+  }
 
  async ngOnInit(): Promise<void> {
     this.sub = this._route.queryParams.subscribe(async data => {
@@ -36,6 +45,7 @@ export class ListComponent implements OnInit, OnDestroy {
         });
       };
     })
+    this.todos$ = this._store.pipe<ITodo[]>(select(selectTodos));
   }
 
   ngOnDestroy(): void {

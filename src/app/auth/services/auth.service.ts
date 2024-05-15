@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IUserLogin } from '../../shared/interfaces/login.interface';
 import { ILoginResponse } from '../../shared/interfaces/login-response.interface';
-import { ROUTES, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Observable, tap, catchError, of } from 'rxjs';
 import { IUserRegister } from '../../shared/interfaces/register.interface';
 import { environment } from '../../../environment/environment';

@@ -1,0 +1,7 @@
+<project-tabs [tabs]="tabs" (selectedTab)="handleTabSelection($event)"></project-tabs>
+<div>this is list</div>
+<div>
+    @for (item of todos$ | async; track $index) {
+        <div>{{item.title}}</div>
+    }
+</div>

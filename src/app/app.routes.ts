@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './shared/guards/auth.guard';
-import { ListComponent } from './list/list.component';
+import { TodosComponent } from './todos/todos.component';
 
 export const routes: Routes = [
     {
@@ -17,9 +17,9 @@ export const routes: Routes = [
         canActivate: [AuthGuard] 
     },    
     { 
-        path: 'list', 
-        title: 'List', 
-        component: ListComponent, 
+        path: 'todos', 
+        title: 'Todos', 
+        component: TodosComponent, 
         canActivate: [AuthGuard] 
     },  
     { 
