@@ -9,16 +9,22 @@ import { GetTodos } from '../store/todos/todos.actions';
 import { selectTodos } from '../store/todos/todos.selector';
 import { ITodo } from '../shared/interfaces/todo.interface';
 import { AsyncPipe } from '@angular/common';
+import { BoardComponent } from './pages/board/board.component';
+import { ListComponent } from './pages/list/list.component';
+import { TableComponent } from './pages/table/table.component';
+import { TilesComponent } from './pages/tiles/tiles.component';
+
 
 @Component({
-  selector: 'app-todos',
-  standalone: true,
-  imports: [ProjectTabsComponent, AsyncPipe],
-  templateUrl: './todos.component.html',
-  styleUrl: './todos.component.scss'
+    selector: 'app-todos',
+    standalone: true,
+    templateUrl: './todos.component.html',
+    styleUrl: './todos.component.scss',
+    imports: [ProjectTabsComponent, AsyncPipe, BoardComponent, ListComponent, TableComponent, TilesComponent]
 })
 export class TodosComponent implements OnInit, OnDestroy {
   tabs: ITabItem[] = LIST_TAB_ITEMS;
+  selectedTab: ITabItem;
   sub: Subscription;
   todos$: Observable<ITodo[]>;
 
@@ -46,6 +52,7 @@ export class TodosComponent implements OnInit, OnDestroy {
       };
     })
     this.todos$ = this._store.pipe<ITodo[]>(select(selectTodos));
+    this.selectedTab = this.tabs.find((t: ITabItem) => t.selected === true) as ITabItem || this.tabs[0];
   }
 
   ngOnDestroy(): void {
@@ -55,7 +62,8 @@ export class TodosComponent implements OnInit, OnDestroy {
   async handleTabSelection(tab: number): Promise<void> {
     this.tabs.forEach(t => t.selected = false);
     this.tabs[tab].selected = true;
-    await this._handleUrlChange(this.tabs[tab].key)
+    this.selectedTab = this.tabs[tab];
+    await this._handleUrlChange(this.selectedTab.key)
   }
 
    /**

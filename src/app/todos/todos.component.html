@@ -1,7 +1,21 @@
 <project-tabs [tabs]="tabs" (selectedTab)="handleTabSelection($event)"></project-tabs>
-<div>this is list</div>
-<div>
-    @for (item of todos$ | async; track $index) {
-        <div>{{item.title}}</div>
+
+@if (todos$ | async; as todos) {
+    @switch (selectedTab.key) {
+        @case ('board') {
+            <board [todos]="todos"></board>
+        }
+        @case ('list') {
+            <list [todos]="todos"></list>
+        }
+        @case ('table') {
+            <table [todos]="todos"></table>
+        }
+        @case ('tiles') {
+            <tiles [todos]="todos"></tiles>
+        }
+        @default {
+            <board [todos]="todos"></board>
+        }
     }
-</div>
+}

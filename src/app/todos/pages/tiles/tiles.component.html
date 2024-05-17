@@ -1,0 +1,5 @@
+<div class="flex gap-3 m-4 flex-wrap">
+    @for (item of todos(); track $index) {
+        <tile-item [item]="item"></tile-item>
+    }
+</div>

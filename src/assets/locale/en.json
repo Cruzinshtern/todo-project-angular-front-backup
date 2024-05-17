@@ -1,6 +1,8 @@
 {
     "general": {
-        "welcome": "Welcome to Todo Project app"
+        "welcome": "Welcome to Todo Project app",
+        "delete": "Delete",
+        "edit": "Edit"
     },
     "auth": {
         "email": "Email",
@@ -22,10 +24,24 @@
         "maxlengthError": "Length should not be more then {{value}} characters",
         "passwordPatternError": "Your password should contain upper and lower case letters and at least one special character"
     },
+    "todos": {
+        "creationDate": "Creation date",
+        "favorite": "Favorite",
+        "status": "Status"
+    },
     "tabs": {
         "board": "Board",
         "list": "List",
         "table": "Table",
         "tiles": "Tiles"
+    },
+    "dialog": {
+        "edit": "Edit",
+        "delete": "Delete",
+        "deleteModal": {
+            "title": "Delete",
+            "text": "Are you sure you want to delete this todo?",
+            "confirmBtnText": "Delete"
+        }
     }
 }

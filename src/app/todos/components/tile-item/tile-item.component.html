@@ -1,0 +1,32 @@
+<div class="border p-4 w-[400px] h-[400px] relative flex flex-col justify-between">
+    <div class="flex flex-col">
+        <div class="absolute top-1 right-1 flex gap-2">
+            <div class="border w-9 h-9 flex justify-center items-center rounded-full hover:cursor-pointer hover:shadow-2xl" 
+                [matTooltip]="'todos.favorite' | translate" matTooltipPosition="above">
+                <mat-icon [ngClass]="[ item().isFavorite ? 'text-red-400' : 'text-gray-200']">favorite</mat-icon>
+            </div>
+            <div class="border w-9 h-9 flex justify-center items-center rounded-full hover:cursor-pointer hover:shadow-2xl"
+                [matTooltip]="'todos.status' | translate" matTooltipPosition="above">
+                <div [ngClass]="[
+                    'h-6', 
+                    'w-6', 
+                    'border', 
+                    'rounded-full', 
+                    item().status === 1 ? 'bg-gray-400' : item().status === 2 ? 'bg-green-400' : item().status === 3 ? 'bg-red-400' : ''
+                    ]"></div>
+            </div>
+        </div>
+        
+        <span class="text-xl mb-2 font-bold">{{ item().title | titlecase }}</span>
+
+        <small class="description">{{ item().description }}</small>    
+    </div>
+
+    <div class="flex flex-col">
+        <small>{{ 'todos.creationDate' | translate }}: {{ item().created_at | date }}</small>
+        <div class="flex justify-between">
+            <project-button (click)="openDialog('edit')">{{ 'general.edit' | translate }}</project-button>
+            <project-button (click)="openDialog('delete')">{{ 'general.delete' | translate }}</project-button>
+        </div>
+    </div>
+</div>

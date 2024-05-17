@@ -1,6 +1,8 @@
 {
     "general": {
-        "welcome": "Вітаємо в Todo Project app"
+        "welcome": "Вітаємо в Todo Project app",
+        "delete": "Видалити",
+        "edit": "Редагувати"
     },
     "auth": {
         "email": "Електрона пошта",
@@ -22,10 +24,24 @@
         "maxlengthError": "Довжина повинна складати не більше {{value}} символів",
         "passwordPatternError": "Ваш пароль повинен містити букви верхнього і нижнього регістру, а також один спеціальний символ"
     },
+    "todos": {
+        "creationDate": "Дата створення",
+        "favorite": "Улюблені",
+        "status": "Статус"
+    },
     "tabs": {
         "board": "Дошка",
         "list": "Список",
         "table": "Таблиця",
         "tiles": "Палітра"
+    },
+    "dialog": {
+        "edit": "Редагувати",
+        "delete": "Видалити",
+        "deleteModal": {
+            "title": "Видалити",
+            "text": "Ви впевнені, що хочете видалити цю задачу?",
+            "confirmBtnText": "Видалити"
+        }
     }
 }
