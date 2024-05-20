@@ -1,1 +1,9 @@
-<div>{{todo().title}}</div>
+<div class="flex gap-2 py-2 px-4 items-center">
+    <div class="title font-bold w-1/5">{{ todo().title }}</div>
+    <div class="description">{{ todo().description }}</div>
+    <div class="flex gap-2 ml-auto">
+        <project-icon [item]="todo()" [iconName]="'favorite'" [tooltipText]="'todos.favorite' | translate"></project-icon>
+        <project-icon [item]="todo()" [iconName]="'status'" [tooltipText]="'todos.status' | translate"></project-icon>
+        <project-icon [iconName]="'close'" [tooltipText]="'general.close' | translate"></project-icon>
+    </div>
+</div>

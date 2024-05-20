@@ -7,11 +7,12 @@ import { MatDialog } from '@angular/material/dialog';
 import { ProjectDialogComponent } from '../../../shared/components/project-dialog/project-dialog.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { ProjectIconComponent } from '../../../shared/components/project-icon/project-icon.component';
 
 @Component({
   selector: 'tile-item',
   standalone: true,
-  imports: [CommonModule, MatIconModule, TitleCasePipe, DatePipe, ProjectButtonComponent, TranslateModule, MatTooltipModule],
+  imports: [CommonModule, MatIconModule, TitleCasePipe, DatePipe, ProjectButtonComponent, TranslateModule, MatTooltipModule, ProjectIconComponent],
   templateUrl: './tile-item.component.html',
   styleUrl: './tile-item.component.scss'
 })

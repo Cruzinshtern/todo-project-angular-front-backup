@@ -1,4 +1,6 @@
-<p>list works!</p>
-@for (item of todos(); track $index) {
-    <list-item [todo]="item"></list-item>
-}
+<div class="flex flex-col gap-2 p-4">
+    @for (item of todos(); track $index) {
+        <list-item [todo]="item"></list-item>
+    }
+</div>
+

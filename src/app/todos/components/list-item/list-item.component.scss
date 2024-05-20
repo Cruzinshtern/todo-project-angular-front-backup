@@ -1,3 +1,23 @@
 :host {
     border: 1px solid grey;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+}
+
+.title {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.description {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 800px;
 }

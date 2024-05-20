@@ -1,5 +1,6 @@
 {
     "general": {
+        "close": "Закрыть",
         "welcome": "Добро пожаловать в Todo Project app",
         "delete": "Удалить",
         "edit": "Редактировать"

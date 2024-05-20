@@ -3,11 +3,13 @@ import { MatDialogRef, MAT_DIALOG_DATA, MatDialogTitle, MatDialogContent, MatDia
 import { IProjectDialogData } from '../../interfaces/project-dialog-data.interface';
 import { ProjectButtonComponent } from '../project-button/project-button.component';
 import { MatIconModule } from '@angular/material/icon';
+import { ProjectIconComponent } from '../project-icon/project-icon.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project-dialog',
   standalone: true,
-  imports: [MatDialogTitle, MatDialogContent, MatDialogActions, MatIconModule, ProjectButtonComponent],
+  imports: [MatDialogTitle, MatDialogContent, MatDialogActions, MatIconModule, ProjectButtonComponent, ProjectIconComponent, TranslateModule],
   templateUrl: './project-dialog.component.html',
   styleUrl: './project-dialog.component.scss'
 })
