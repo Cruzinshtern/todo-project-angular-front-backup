@@ -1,6 +1,4 @@
-<p>table works!</p>
-<div>
-    @for (item of todos(); track $index) {
-        <div>{{item.title}}</div>
-    }
+<div class="p-3">
+    <custom-angular-table [columns]="['title', 'description', 'created_at', 'status']" [tableData]="todos()"></custom-angular-table>
+    <custom-angular-paginator [length]="todos().length"  [pageSizeOptions]="[2, 5, 10]"></custom-angular-paginator>
 </div>

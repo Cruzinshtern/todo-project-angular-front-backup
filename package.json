@@ -26,6 +26,7 @@
     "@ngrx/store-devtools": "^17.2.0",
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
+    "custom-angular-component-lib": "^0.0.2",
     "flag-icons": "^7.2.1",
     "ngx-toastr": "^18.0.0",
     "rxjs": "~7.8.0",
