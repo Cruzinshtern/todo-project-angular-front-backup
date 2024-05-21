@@ -1,4 +1,6 @@
-<project-tabs [tabs]="tabs" (selectedTab)="handleTabSelection($event)"></project-tabs>
+<div class="flex justify-end mb-6">
+    <project-tabs [tabs]="tabs" (selectedTab)="handleTabSelection($event)"></project-tabs>
+</div>
 
 @if (todos$ | async; as todos) {
     @switch (selectedTab.key) {
