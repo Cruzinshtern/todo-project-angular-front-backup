@@ -28,7 +28,10 @@
     "todos": {
         "creationDate": "Creation date",
         "favorite": "Favorite",
-        "status": "Status"
+        "status": "Status",
+        "todo": "Todo",
+        "active": "Active",
+        "done": "Done"
     },
     "tabs": {
         "board": "Board",
