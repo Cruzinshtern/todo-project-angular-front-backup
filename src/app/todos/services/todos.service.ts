@@ -2,6 +2,8 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { environment } from "../../../environment/environment";
 import { Observable } from "rxjs";
+import { ITodo } from "../../shared/interfaces/todo.interface";
+import { IGetAllTodosResponse } from "../../shared/interfaces/get-all-todos.interface";
 
 @Injectable({ providedIn: 'root' })
 export class TodosService {
@@ -10,7 +12,11 @@ export class TodosService {
 
     constructor(private _httpClient: HttpClient) {}
 
-    getAllTodos(): Observable<any> {
-        return this._httpClient.get(this.basicUrl + '/tasks');
+    getAllTodos(): Observable<IGetAllTodosResponse> {
+        return this._httpClient.get<IGetAllTodosResponse>(this.basicUrl + '/tasks');
+    }
+
+    createTodo(todo: ITodo): Observable<ITodo> {
+        return this._httpClient.post<ITodo>(this.basicUrl + '/tasks/create', todo);
     }
 }

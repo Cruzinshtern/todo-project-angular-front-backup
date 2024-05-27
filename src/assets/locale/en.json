@@ -2,6 +2,8 @@
     "general": {
         "close": "Close",
         "welcome": "Welcome to Todo Project app",
+        "create": "Create",
+        "reset": "Reset",
         "delete": "Delete",
         "edit": "Edit"
     },
@@ -31,7 +33,11 @@
         "status": "Status",
         "todo": "Todo",
         "active": "Active",
-        "done": "Done"
+        "done": "Done",
+        "title": "Title",
+        "description": "Description",
+        "dueToDate": "Due to date",
+        "startDate": "Start date"
     },
     "tabs": {
         "board": "Board",

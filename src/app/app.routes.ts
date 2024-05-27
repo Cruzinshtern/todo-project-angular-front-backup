@@ -3,6 +3,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { TodosComponent } from './todos/todos.component';
+import { TodoFormComponent } from './todo-form/todo-form.component';
 
 export const routes: Routes = [
     {
@@ -15,7 +16,13 @@ export const routes: Routes = [
         title: 'Home', 
         component: HomeComponent, 
         canActivate: [AuthGuard] 
-    },    
+    },
+    { 
+        path: 'todo-form', 
+        title: 'TodoForm', 
+        component: TodoFormComponent, 
+        canActivate: [AuthGuard] 
+    },      
     { 
         path: 'todos', 
         title: 'Todos', 

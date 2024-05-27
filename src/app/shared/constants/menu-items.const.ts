@@ -7,6 +7,7 @@ export const MENU_ITEMS: IMenuItem[] = [
 
     // Main menu items
     {key: 'home', value: 'Home', path: '/home'},
+    {key: 'note_add', value: 'Add', path: '/todo-form'},
     {key: 'list', value: 'Todos', path: '/todos'},
     {key: 'settings', value: 'Settings', path: '/settings'},
 
