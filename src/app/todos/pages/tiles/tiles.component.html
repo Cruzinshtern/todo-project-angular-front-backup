@@ -1,5 +1,5 @@
 <div class="flex gap-3 m-4 flex-wrap">
     @for (item of todos(); track $index) {
-        <tile-item [item]="item"></tile-item>
+        <tile-item class="hover:cursor-pointer" [item]="item" (click)="redirectToTodoPage(item._id)"></tile-item>
     }
 </div>

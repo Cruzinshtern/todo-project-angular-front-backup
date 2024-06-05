@@ -36,6 +36,8 @@
         "done": "Done",
         "title": "Title",
         "description": "Description",
+        "noDescription": "No description",
+        "isFavorite": "Is in favorite",
         "dueToDate": "Due to date",
         "startDate": "Start date"
     },

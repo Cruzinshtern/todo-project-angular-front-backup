@@ -19,4 +19,8 @@ export class TodosService {
     createTodo(todo: ITodo): Observable<ITodo> {
         return this._httpClient.post<ITodo>(this.basicUrl + '/tasks/create', todo);
     }
+
+    getOneTodo(id: string): Observable<ITodo> {
+        return this._httpClient.get<ITodo>(this.basicUrl + `/tasks/${id}`);
+    }
 }

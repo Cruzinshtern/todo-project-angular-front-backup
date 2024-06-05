@@ -13,8 +13,8 @@
     <div class="flex flex-col">
         <small>{{ 'todos.creationDate' | translate }}: {{ item().created_at | date }}</small>
         <div class="flex justify-between">
-            <project-button (click)="openDialog('edit')">{{ 'general.edit' | translate }}</project-button>
-            <project-button (click)="openDialog('delete')">{{ 'general.delete' | translate }}</project-button>
+            <project-button (click)="openEditDialog($event)">{{ 'general.edit' | translate }}</project-button>
+            <project-button (click)="openDeleteDialog($event)">{{ 'general.delete' | translate }}</project-button>
         </div>
     </div>
 </div>

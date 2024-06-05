@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { TodosComponent } from './todos/todos.component';
 import { TodoFormComponent } from './todo-form/todo-form.component';
+import { TodoPageComponent } from './todo-page/todo-page.component';
 
 export const routes: Routes = [
     {
@@ -28,7 +29,13 @@ export const routes: Routes = [
         title: 'Todos', 
         component: TodosComponent, 
         canActivate: [AuthGuard] 
-    },  
+    },
+    { 
+        path: 'todo-page', 
+        title: 'TodoPage', 
+        component: TodoPageComponent, 
+        canActivate: [AuthGuard] 
+    },    
     { 
         path: '',   
         redirectTo: 'home', 

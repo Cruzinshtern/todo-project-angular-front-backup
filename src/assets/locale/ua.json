@@ -36,6 +36,8 @@
         "done": "Зроблено",
         "title": "Назва",
         "description": "Опис",
+        "noDescription": "Немає опису",
+        "isFavorite": "У списку улюблених",
         "dueToDate": "Необхідно виконати до",
         "startDate": "Дата початку виконання"
     },

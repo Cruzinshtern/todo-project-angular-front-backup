@@ -1,0 +1,46 @@
+@if (todo$ | async; as todo) {
+    <div class="flex flex-col h-full">
+        <div class="flex flex-col gap-5">
+            <div>
+                <h1 class="font-bold text-2xl">{{ todo.title }}</h1>
+                <small class="italic">_id: {{ todo._id }}</small>
+            </div>
+            
+            <div class="flex flex-col">
+                <span class="font-bold">{{ 'todos.description' | translate }}</span>
+                @if (todo.description) {
+                    <span>{{ todo.description }}</span>
+                } @else {
+                    <small class="italic">{{ 'todos.noDescription' | translate }}</small>
+                }
+            </div>
+        
+            <div class="flex flex-col">
+                <span class="font-bold">{{ 'todos.isFavorite' | translate }}</span>
+                <span>{{ todo.isFavorite }}</span>
+            </div>
+        
+            <div class="flex flex-col">
+                <span class="font-bold">{{ 'todos.status' | translate }}</span>
+                <span>{{ todo.status }}</span>
+            </div>
+        
+            <div class="flex gap-10">
+                <div class="flex flex-col">
+                    <span class="font-bold">{{ 'todos.creationDate' | translate }}</span>
+                    <span>{{ todo.created_at | date }}</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold">{{ 'todos.startDate' | translate }}</span>
+                    <span>{{ todo.start_at | date }}</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-auto flex justify-between">
+            <project-button (click)="handleEdit(todo)">{{ 'general.edit' | translate }}</project-button>
+            <project-button (click)="handleDelete()">{{ 'general.delete' | translate }}</project-button>
+        </div>
+    </div>
+}
+

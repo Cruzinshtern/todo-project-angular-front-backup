@@ -13,5 +13,5 @@ import { ToastrService } from "ngx-toastr";
 
     error(message: string): void {
       this.toastr.error(message);
-  }
+    }
   }
