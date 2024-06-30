@@ -1,12 +1,13 @@
 import { Component, InputSignal, input } from '@angular/core';
 import { ITodo } from '../../../shared/interfaces/todo.interface';
 import { BaseTabViewComponent } from '../../components/base-tab-view/base-tab-view.component';
-import { CustomAngularPaginatorComponent, CustomAngularTableComponent } from 'custom-angular-component-lib';
+// import { CustomAngularPaginatorComponent, CustomAngularTableComponent } from 'custom-angular-component-lib';
 
 @Component({
   selector: 'table',
   standalone: true,
-  imports: [CustomAngularTableComponent, CustomAngularPaginatorComponent],
+  // imports: [CustomAngularTableComponent, CustomAngularPaginatorComponent],
+  imports: [],
   templateUrl: './table.component.html',
   styleUrl: './table.component.scss'
 })
