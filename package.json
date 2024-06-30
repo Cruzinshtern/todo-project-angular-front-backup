@@ -8,7 +8,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "x": "ng update @angular/core@18 @angular/cli@18"
+    "update_core": "ng update @angular/core@18 @angular/cli@18",
+    "update_store": "ng update @ngrx/store@18"
   },
   "private": true,
   "dependencies": {
